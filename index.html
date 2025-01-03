@@ -19,7 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Preloader -->
+    <!-- Preload -->
+    <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
 </head>
 <body>
 
@@ -111,6 +113,45 @@
 
         <div class="overlay" data-overlay data-nav-toggler></div>
     </header>
+
+    <main>
+        <article>
+
+            <!-- Hero -->
+             <section class="section hero has-bg-image" aria-label="home" style="background-image: url(./assets/images/hero-bg.jpg);">
+                <div class="container">
+
+                    <!-- Hero content -->
+                    <div class="hero-content">
+                        <h1 class="h1 hero-title has-after">
+                            Find Your Next Great Read
+                        </h1>
+
+                        <p class="hero-text">
+                            Explore curated books, special deals, and find your next great read in a clean, engaging layout designed for book lovers.
+                        </p>
+
+                        <button class="btn-wrapper">
+                            <a href="/" class="btn">
+                                <span class="span">Explore More</span>
+
+                                <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                            </a>
+
+                            <button class="play-btn" aria-label="play video">
+                                <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </button>
+                    </div>
+
+                    <!-- Hero banner -->
+                    <figure class="hero-banner">
+                        <img src="./assets/images/hero-banner.png" width="475" height="600" aria-label="hero banner" class="w-100" alt="Hero banner">
+                    </figure>
+                </div>
+             </section>
+        </article>
+    </main>
 
     <!-- External JavaScript -->
     <script src="./js/script.js" defer></script>

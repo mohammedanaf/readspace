@@ -141,6 +141,75 @@ body {
     padding-inline: 15px;
 }
 
+.section {
+    padding-block: var(--section-padding);
+}
+
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h1,
+.h2,
+.h3 {
+    font-family: var(--ff-jost);
+    font-weight: var(--fw-500);
+    line-height: 1.25;
+}
+
+.h1 {
+    font-size: var(--fs-1);
+}
+
+.h2 {
+    font-size: var(--fs-2);
+}
+
+.h3 {
+    font-size: var(--fs-6);
+}
+
+.has-before,
+.has-after {
+    position: relative;
+    z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+
+.btn {
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+    max-width: max-content;
+    border: 1px solid var(--white-1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 30px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition-1);
+}
+
+.btn ion-icon {
+    font-size: 16px;
+}
+
+.btn:is(:hover, :focus) {
+    background-color: var(--maximum-blue-green);
+    border-color: var(--maximum-blue-green);
+}
+
+.w-100 {
+    width: 100%;
+}
+
 /* Header */
 .header-top :is(.input-wrapper, .header-action-btn:last-child),
 .header-contact-link {
@@ -304,3 +373,37 @@ body {
     opacity: 1;
     pointer-events: all;
 }
+
+/* Hero */
+.hero {
+    padding-block-start: 90px;
+    background-position: left;
+}
+
+.hero .play-btn {
+    display: none;
+}
+
+.hero .container {
+    display: grid;
+    gap: 20px;
+}
+
+.hero-title::after {
+    bottom: -15px;
+    left: 0;
+    width: 70px;
+    height: 5px;
+    background-color: var(--maximum-blue-green);
+}
+
+.hero-text {
+    margin-block: 40px;
+}
+
+.hero-banner {
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+
