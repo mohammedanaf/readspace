@@ -569,3 +569,35 @@ body {
 .featured .grid-list {
     gap: 10px;
 }
+
+/* Offer */
+.offer {
+    text-align: center;
+}
+
+.offer .section-subtitle {
+    font-size: var(--fs-3);
+}
+
+.offer .section-title {
+    --fs-2: 3rem;
+    color: var(--maximum-blue-green);
+    margin-block: 20px 30px
+}
+
+.countdown-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-block: 25px 40px;
+}
+
+.countdown-time {
+    font-size: var(--fs-5);
+    margin-block-end: 8px;
+}
+
+.offer .btn {
+    padding-block: 12px;
+    margin-inline: auto;
+}
