@@ -1,10 +1,9 @@
 'use strict'
 
 // Add event listener on elements
-
 const addEventonElements = function (element, event, callback) {
     if (element.length > 1) {
-        for(let i=0 ; i<element.length ; i++) {
+        for (let i = 0; i < element.length; i++) {
             element[i].addEventListener(event, callback);
         }
     } else {
@@ -13,7 +12,6 @@ const addEventonElements = function (element, event, callback) {
 }
 
 // Navbar Toggle
-
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
@@ -26,7 +24,6 @@ const toggleNavbar = function () {
 addEventonElements(navTogglers, "click", toggleNavbar);
 
 // Active header on scroll and back to top button
-
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]")
 
@@ -43,7 +40,7 @@ const activeHeaderonScroll = function () {
 
 addEventonElements(window, "scroll", activeHeaderonScroll);
 
-//  Special Offer Countdown
+//  Countdown in Special Offers section
 document.addEventListener('DOMContentLoaded', (event) => {
     const countdownDate = new Date("Dec 31, 2025 23:59:59").getTime();
 
@@ -73,7 +70,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const interval = setInterval(updateCountdown, 1000);
 });
 
-// Popular Collection filter products
+// Filter products in Popular Collections section
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 const filterItems = document.querySelectorAll("[data-filter]");
 
@@ -84,8 +81,8 @@ const filter = function () {
     this.classList.add("active");
     lastClickedBtn = this;
 
-    for (let i=0 ; i<filterItems.length ; i++) {
-        if(filterItems[i].dataset.filter === this.dataset.filterBtn) {
+    for (let i = 0; i < filterItems.length; i++) {
+        if (filterItems[i].dataset.filter === this.dataset.filterBtn) {
             filterItems[i].style.display = "block";
         } else {
             filterItems[i].style.display = "none";
@@ -95,16 +92,15 @@ const filter = function () {
 
 addEventonElements(filterBtn, "click", filter)
 
-// Registering service worker
+// Registering the service worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then((registration) => {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch((error) => {
-          console.log('ServiceWorker registration failed: ', error);
-        });
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch((error) => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
     });
-  }
-  
+}
