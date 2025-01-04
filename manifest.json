@@ -1,0 +1,21 @@
+{
+    "name": "Read Space: Where Stories Come to Life",
+    "short_name": "ReadSpace",
+    "description": "Read Space is a beautifully designed bookstore landing page that focuses on simplicity and elegance. It showcases a variety of books, special deals, and featured collections in a clean and engaging way. With its user-friendly layout and attention to detail, it provides a seamless browsing experience, making it ideal for attracting book lovers.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#00001F",
+    "theme_color": "#66C5CC",
+    "icons": [
+        {
+            "src": "/assets/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/images/logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
