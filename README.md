@@ -16,7 +16,7 @@ To get started with **ReadSpace**, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/mohammedanaf/read-space.git
+git clone https://github.com/mohammedanaf/readspace.git
 ```
 
 2. Navigate into the project directory:
